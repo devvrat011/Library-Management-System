@@ -1,4 +1,11 @@
+.react-multi-carousel-dot,
+      .react-multi-carousel-item {
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
+      }
 
+     
 .react-multiple-carousel__arrow {
     position: absolute;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);

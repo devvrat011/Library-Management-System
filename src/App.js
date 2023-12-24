@@ -2,14 +2,13 @@ import logo from './logo.svg';
 import './App.css';
 
 import Home from './pages/home/Home';
-import Footer from './component/Footer';
-
+import Footer from './components/Footer';
 import Navbar from './components/Navbar';
 function App() {
   return (
     <div>
-       <Navbar/>
-      <Home/>
+      <Navbar/>
+        <Home/>
       <Footer/>
     </div>
   );

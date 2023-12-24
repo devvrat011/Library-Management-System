@@ -1,7 +1,7 @@
 import img from "../Images/img.webp";
 const Card=()=>{
     return(
-        <div className="shadow-xl w-36 mb-6 h-60 rounded-b-xl  ">
+        <div className="shadow-xl w-36 mb-6 h-60 bg-white rounded-b-xl  ">
             <div className="h-[70%] w-full border-2">
                 <img src={img} className="w-full h-full"/>
             </div>
