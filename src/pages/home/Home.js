@@ -4,6 +4,8 @@ import React from "react";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import "./Home.css";
+import Footer from '../../components/Footer';
+import Navbar from '../../components/Navbar';
 import SearchIcon from '@mui/icons-material/Search';
 import FrontPhoto from '../../Images/landingpage_photo.png';
 import CategoryCard from "../../components/categoryCard";
@@ -20,7 +22,7 @@ import CreateIcon from '@mui/icons-material/Create';
 import ApartmentIcon from '@mui/icons-material/Apartment';
 
 const Home = () => {
-
+  
   const {ref: myfade, inView: myCategoryIsVisible } = useInView();
   const {ref: myfade1, inView: myCategory1IsVisible } = useInView();
   const {ref: verFade, inView: myImgIsVisible } = useInView();
@@ -88,6 +90,7 @@ const Home = () => {
 
   return (
     <div>
+      <Navbar/>
       <div className='hidden md:flex md:justify-evenly h-screen bg-[#010316]'>
         <div className='flex flex-col animate-translate_fade  p-2 w-[45%] '>
         <div className='text-[#e6f0c8] my-2 text-md md:text-lg'>Library Management System</div>
@@ -172,6 +175,25 @@ const Home = () => {
             <img src={img5} />
           </div>
         </div>
+
+        <div className=" w-full p-4">
+                <div className=" font-bold text-2xl">
+                    New Books
+                </div>
+                <div className="mx-auto w-[90%] my-4 " > 
+                <Carousel responsive={responsive}  showDots={true} 
+                centerMode={true}
+               
+                 className="mx-auto"
+                > 
+                    <Card/>
+                    <Card/>
+                    <Card/>
+                    <Card/>
+                    <Card/>
+                </Carousel>
+                </div>
+            </div>
 
         <div  className={`w-full ${myFadeVisible?"animate-issue_finite":""} bg-[#f4dfdf] py-8 grid grid-cols-2 gap-4 md:flex justify-evenly  items-center`}>
               <div className=" w-40 h-40">
@@ -329,6 +351,7 @@ const Home = () => {
             </div>
              */}
       </div>
+      <Footer/>
     </div>
 
 
