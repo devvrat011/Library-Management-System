@@ -6,15 +6,15 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
 const Footer=()=>{
     return(
-        <div className="bg-black h-72  text-white">
+        <div className="bg-black h-full  text-white">
           
         <div className="h-68  flex justify-evenly py-8 text-white">
             <div className=" w-2/5 py-4 px-4 md:w-1/5">
                 <div className="font-bold text-white text-xl mb-4">
-                    FIR DAPP
+                    Library Management System
                 </div>
                 <div className="text-sm">
-                    FIR.inc<br></br>
+                    LIB.inc<br></br>
                     Contact us 87xxxxxx90<br></br>
                     Email us: Blocks@gmail.com
                 </div>
@@ -57,16 +57,16 @@ const Footer=()=>{
                     Need Help ?
                 </div>
                 <div className="text-sm mt-4">
-                    This is FIR dapp is decentralised Dapp which allows user to File complaint and officers to get analysis of crimes<br></br> For any help Contact us
+                    This is Library is decentralised Dapp which allows user to File complaint and officers to get analysis of crimes<br></br> For any help Contact us
                 </div>
             </div>
         </div>
 
-        <div className="h-16  bg-black flex w-full text-white py-4">
-            <div className="w-2/4 text-center text-sm">
+        <div className="h-16 border-white border-t-4 bg-black flex w-full text-white ">
+            <div className="w-2/4 text-center text-sm flex flex-col justify-center">
                 Copyright © 2023 Pratik Gupta Ltd.
             </div>
-            <div className="w-2/4 mx-auto">
+            <div className="w-2/4 mx-auto flex flex-col justify-center">
                 <ul className="flex justify-evenly text-xs mx-6 md:mx-14"> 
                     <li className="hover:scale-105 transition ease-in">
                         Terms And Conditions
