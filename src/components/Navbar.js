@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './Navbar.css';
+import { useNavigate } from 'react-router-dom';
 
 function CustomNavbar() {
   const [showMenu, setShowMenu] = useState(false);
@@ -7,7 +8,10 @@ function CustomNavbar() {
   const toggleMenu = () => {
     setShowMenu(!showMenu);
   };
-
+  const navigate = useNavigate();
+  const navigateToProfile = () => {
+        navigate(`/admin`);
+  }
   return (
     <nav className="navbar">
       <div className="navbar-logo">Logo</div>
@@ -16,6 +20,7 @@ function CustomNavbar() {
         <a href="#about">About</a>
         <a href="#services">Services</a>
         <a href="#contact">Contact</a>
+        <a className='cursor-pointer' onClick={navigateToProfile}>Profile</a>
       </div>
       <div className="menu-icon" onClick={toggleMenu}>
         <div className={`bar1 ${showMenu ? 'change' : ''}`}></div>

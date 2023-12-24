@@ -1,17 +1,19 @@
-
 import Card from "../../components/Card";
 import React from "react";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import "./Home.css";
 import FrontPhoto from '../../Images/landingpage_photo.png'
+import Navbar from '../../components/Navbar'
+import Footer from '../../components/Footer'
+
 const Home=()=>{
 
 const responsive = {
   superLargeDesktop: {
-   
     breakpoint: { max: 4000, min: 3000 },
-    items: 5
+    items: 5,
+    
   },
   desktop: {
     breakpoint: { max: 3000, min: 1024 },
@@ -32,7 +34,8 @@ const responsive = {
       
     return(
       <div>
-        <div className='flex justify-evenly'>
+        <Navbar/>
+        <div className='flex justify-evenly bg-[#010316]'>
             <div className='flex flex-col justify-center gap-4 w-[45%] '>
                 <div className='text-white text-lg md:text-4xl'>Good books don't give up all their secrets at once.</div>
                 <div className='text-white text-md md:text-xl'>A small river named Duden flows by their place and supplies it with the necessary regelia.</div>
@@ -55,16 +58,35 @@ const responsive = {
                     
                 </div>
             </div>
-
             <div className=" w-full p-4">
                 <div className=" font-bold text-2xl">
                     New Books
                 </div>
-                <div className="mx-auto w-[90%]  my-4  " >
+                <div className="mx-auto w-[90%] my-4 " >
                     
                 <Carousel responsive={responsive}  showDots={true} 
                 centerMode={true}
-                
+
+                 className="mx-auto "
+                > 
+                    <Card/>
+                    <Card/>
+                    <Card/>
+                    <Card/>
+                    <Card/>
+                   
+                </Carousel>
+                </div>
+            </div>
+            <div className=" w-full p-4">
+                <div className=" font-bold text-2xl">
+                    New Books
+                </div>
+                <div className="mx-auto w-[90%] my-4 " > 
+                <Carousel responsive={responsive}  showDots={true} 
+                centerMode={true}
+               
+                 className="mx-auto"
                 > 
                     <Card/>
                     <Card/>
@@ -74,26 +96,8 @@ const responsive = {
                 </Carousel>
                 </div>
             </div>
-
-            <div className="w-full p-4">
-                <div className=" font-bold text-2xl">
-                    Best Selling
-                </div>
-                <div className="mx-auto w-[90%]  my-4  ">
-                <Carousel responsive={responsive} showDots={true} centerMode={true}> 
-                    <Card/>
-                    <Card/>
-                    <Card/>
-                    <Card/>
-                    <Card/>
-                </Carousel>
-                </div>
-                
-            
-
-            </div>
-            
         </div>
+        <Footer/>
 </div>
 
 
